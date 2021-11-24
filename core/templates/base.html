@@ -27,6 +27,7 @@
                <li><a href="{%url 'core:contatogleison'%}">CONTATO</a></li>
 
                {% if user.is_authenticated %}
+               <li><a href="{%url 'accounts:dashboard'%}">PAINEL</a></li>
                <li><a href="{%url 'accounts:logout'%}">SAIR</a></li>
                {% else %}
                <li><a href="{%url 'accounts:login'%}">ENTRAR</a></li>

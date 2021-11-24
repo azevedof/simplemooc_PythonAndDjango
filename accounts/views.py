@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
-from django.conf import settings
 from .forms import RegistraForm
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def dashboard(request):
+    template_name = 'registration/dashboard.html'
+    return render(request, template_name)
 
 def register(request):
     template_name = 'registration/register.html'
