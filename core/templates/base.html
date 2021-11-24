@@ -28,7 +28,7 @@
 
                {% if user.is_authenticated %}
                <li><a href="{%url 'accounts:logout'%}">SAIR</a></li>
-                {% else %}
+               {% else %}
                <li><a href="{%url 'accounts:login'%}">ENTRAR</a></li>
                {% endif %}
 

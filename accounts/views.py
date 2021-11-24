@@ -14,7 +14,7 @@ def register(request):
                 username=user.username, password=form.cleaned_data['password1']
             )
             login(request, user)
-            return redirect(settings.LOGIN_URL)
+            return redirect('core:home')
     else:
         form = RegistraForm()
     context = {
