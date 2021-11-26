@@ -25,7 +25,7 @@ class EditAccountForm(forms.ModelForm):
     # validação de email no formulário
     def clean_email(self):
         email = self.cleaned_data['email']
-        queryset = User.objects.filter9(email=email).exclude(pk=self.instance.pk)
+        queryset = User.objects.filter(email=email).exclude(pk=self.instance.pk)
         if queryset.exists():
             raise forms.ValidationError('Já existe usuário com este E-mail!')
         return email
